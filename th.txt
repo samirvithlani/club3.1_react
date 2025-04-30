@@ -1,0 +1,40 @@
+MERN :
+m mongo db:
+E express middle....
+R react js
+N node
+
+
+R react js lib :
+	vite
+next
+remix
+
+
+npm: node package manager:
+
+JDK/ jvm /jre --> jar --> packages -->class --> methods
+NPM/ node_modules --> buld/dist --> packages/ folders ---> .js/.ts --> functions
+
+
+desktop : mern...
+	  terminal :
+		npm create vite
+			projectname : learning25
+			react
+			javascript
+			  
+ 				cd learniong25
+				npm install
+				code .
+				open inte.. terminal
+				npm run dev
+	
+
+Framework: FRONT,BACKEND
+	 
+	front tecj : js : client side: react js : browser
+	js + node , java, php, : nodejs,expressjs,spring... backend
+
+n tire application
+	jsp + servelet : java : MVC
