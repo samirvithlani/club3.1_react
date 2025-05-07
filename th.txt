@@ -38,3 +38,14 @@ Framework: FRONT,BACKEND
 
 n tire application
 	jsp + servelet : java : MVC
+
+
+single page application:
+
+in react we can create 2 type of component:
+class based component   :
+function based component: 16.x
+
+component creatoin rules:
+1. component name should start with capital letter
+2. component should return only one element
