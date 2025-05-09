@@ -11,7 +11,7 @@ export default function Content() {
     age: 20,
   };
   return (
-    <div>
+    <div style={{ backgroundColor: "lightblue" }}>
       <h1>CONTENT</h1>
       <h1>HELLO</h1>
       <h1>AT A TIME WE CAN RETURN 1 tag only...</h1>
