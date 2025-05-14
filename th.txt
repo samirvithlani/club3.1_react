@@ -49,3 +49,10 @@ function based component: 16.x
 component creatoin rules:
 1. component name should start with capital letter
 2. component should return only one element
+
+SINGLE PAGE APP: index.html
+components : componet url --> routing
+npm i react-router-dom
+<BrowserRouter> :- application routing enable.. : main.jsx
+<Routes> :-> <Route></route>
+<Route>  : component -->url
