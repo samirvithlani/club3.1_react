@@ -13,6 +13,7 @@ import { Shows } from './components/hotstar/Shows.jsx'
 import { Navbar } from './components/Navbar.jsx'
 import { Home } from './components/hotstar/Home.jsx'
 import { Error404 } from './components/Error404.jsx'
+import { PLayContent } from './components/hotstar/PLayContent.jsx'
 //import './App.css'
 
 //component..
@@ -27,6 +28,7 @@ function App() {
           <Route path='/' element ={<Home/>}></Route>
           <Route path='/movies' element = {<Movies/>}></Route>
           <Route path='/shows' element = {<Shows/>}></Route>
+          <Route path='/playing/:id' element = {<PLayContent/>}></Route>
           {/* <Route path='/*' element = {<h1>404</h1>}></Route> */}
           <Route path='/*' element = {<Error404/>}></Route>
       </Routes>
