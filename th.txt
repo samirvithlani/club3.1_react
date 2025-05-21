@@ -56,3 +56,18 @@ npm i react-router-dom
 <BrowserRouter> :- application routing enable.. : main.jsx
 <Routes> :-> <Route></route>
 <Route>  : component -->url
+
+<html> -- DOM 
+js --> dom --->update -->createElemet ->
+DOM object full update
+
+React js :
+OG DOM -> copy --> Virtual DOM
+
+chnages --> vdom --> og compare -->
+
+react component:
+1st class based : life cycle methods
+2nd function based : hooks intro : builtin function
+
+react hooks : useState,useRef,useMemo,useeffect

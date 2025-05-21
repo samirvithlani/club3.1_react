@@ -21,6 +21,12 @@ export const Navbar = () => {
       </li>
     
       
+      <li class="nav-item">
+        <Link class="nav-link" to="/useStateDemo">useStateDemo</Link>
+      </li>
+      <li class="nav-item">
+        <Link class="nav-link" to="/useStateDemo2">useStateDemo2</Link>
+      </li>
     </ul>
     
   </div>
