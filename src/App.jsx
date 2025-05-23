@@ -17,6 +17,7 @@ import { PLayContent } from './components/hotstar/PLayContent.jsx'
 import { UseStateDemo } from './components/UseStateDemo.jsx'
 import { UseStateDemo2 } from './components/UseStateDemo2.jsx'
 import { UseStateDemo3 } from './components/UseStateDemo3.jsx'
+import { InputDemo1 } from './components/InputDemo1.jsx'
 //import './App.css'
 
 //component..
@@ -35,6 +36,7 @@ function App() {
           <Route path='/useStateDemo' element = {<UseStateDemo/>}></Route>
           <Route path='/useStateDemo2' element = {<UseStateDemo2/>}></Route>
           <Route path='/useStateDemo3' element = {<UseStateDemo3/>}></Route>
+          <Route path='/inputdemo1' element = {<InputDemo1/>}></Route>
           {/* <Route path='/*' element = {<h1>404</h1>}></Route> */}
           <Route path='/*' element = {<Error404/>}></Route>
       </Routes>
