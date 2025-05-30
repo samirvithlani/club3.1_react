@@ -18,13 +18,26 @@ export const FindBomb = () => {
     //spread operator...
     console.log("before..",clickedTiles)
     var x = [...clickedTiles,index]
+    console.log(x)
     console.log("after...",x)
-    setclickedTiles(x)
-    setwinningAmount(clickedTiles.length*amount)
+    setclickedTiles(x) //1
+   
     if(bombPos == index){
+        console.log("clicked title",x.length)
+        if(clickedTiles.length == 1){
+          setwinningAmount(0)
+          setgameOver(true)
+        }
         setgameOver(true)
+        
        // window.location.reload()
     }
+    if(gameOver==false){
+      
+      const multiplier = 1 + x.length * 0.5; //
+      console.log("multiplier",multiplier)
+      setwinningAmount(amount * multiplier)
+      }
   }
   const startGame = ()=>{
     var x = parseInt(prompt("enter amount to bet min [10-1000]"))
