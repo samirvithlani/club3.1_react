@@ -5,7 +5,10 @@ export const FindBomb = () => {
   var totaltiles = gridsize * gridsize; //16
   const [clickedTiles, setclickedTiles] = useState([]) //[24]
   const [gameOver, setgameOver] = useState(false)
+  const [amount, setamount] = useState() //10
+  const [winningAmount, setwinningAmount] = useState(0)
   //var bombPos = Math.floor(Math.random()*totaltiles)
+
   var bombPos = useMemo(()=>{
     return Math.floor(Math.random()*totaltiles)
   },[])
@@ -17,13 +20,21 @@ export const FindBomb = () => {
     var x = [...clickedTiles,index]
     console.log("after...",x)
     setclickedTiles(x)
+    setwinningAmount(clickedTiles.length*amount)
     if(bombPos == index){
         setgameOver(true)
+       // window.location.reload()
     }
+  }
+  const startGame = ()=>{
+    var x = parseInt(prompt("enter amount to bet min [10-1000]"))
+    console.log(x)
+    setamount(x)
   }
   return (
     <div style={{ textAlign: "center" }}>
       <h1>FindBomb</h1>
+      <button onClick={()=>{startGame()}}>BET</button>
       <div
         style={{
           display: "grid",
@@ -56,6 +67,9 @@ export const FindBomb = () => {
           );
         })}
       </div>
+      {
+        gameOver && winningAmount
+      }
     </div>
   );
 };
