@@ -71,3 +71,20 @@ react component:
 2nd function based : hooks intro : builtin function
 
 react hooks : useState,useRef,useMemo,useeffect
+
+
+npm i react-hook-form
+
+cosnt[register,resister]useState[{}]
+handleSubmit(cb)=>{
+
+	name --> event.target.value
+	{
+		name: event.target.value,
+	}
+
+
+	cb(data)
+
+
+}
