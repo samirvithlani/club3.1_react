@@ -21,6 +21,7 @@ import { InputDemo1 } from './components/InputDemo1.jsx'
 import { UseMemoDemo1 } from './components/UseMemoDemo1.jsx'
 import { FindBomb } from './components/FindBomb.jsx'
 import { FormDemo1 } from './form/FormDemo1.jsx'
+import { FormDemo2 } from './form/FormDemo2.jsx'
 //import './App.css'
 
 //component..
@@ -43,6 +44,7 @@ function App() {
           <Route path="/usememo1" element = {<UseMemoDemo1/>}></Route>
           <Route path='/findbomb' element = {<FindBomb/>}></Route>
           <Route path='/formDemo1' element = {<FormDemo1/>}></Route>
+          <Route path='/formdemo2' element = {<FormDemo2/>}></Route>
           {/* <Route path='/*' element = {<h1>404</h1>}></Route> */}
           <Route path='/*' element = {<Error404/>}></Route>
       </Routes>

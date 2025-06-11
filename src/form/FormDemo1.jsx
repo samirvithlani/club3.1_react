@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 export const FormDemo1 = () => {
     const{register,handleSubmit}=useForm()
+    const [data, setdata] = useState({})
+    const [isSubbmited, setisSubbmited] = useState(false)
     //register -->ibject
     //handleSubmit function
     const submitHandler= (data)=>{
 
             console.log(data)
+            setdata(data)
+            setisSubbmited(true)
     }
   return (
     <div
@@ -46,6 +50,21 @@ export const FormDemo1 = () => {
             <input type="submit"></input>
         </div>
       </form>
+      {
+        isSubbmited && <div>
+        <h1>OUTPUT</h1>
+        <h1>NAME = {data.name}</h1>
+        <h2>HOBBIES</h2>
+        <ul>
+          {
+            data.hobbies.map((h)=>{
+              return <li>{h}</li>
+            })
+          }
+        </ul>
+      </div>
+      }
+      
     </div>
   );
 };
