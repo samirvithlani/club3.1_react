@@ -101,3 +101,18 @@ handleSubmit(cb)=>{
             message:"age is required*"
           }
 }
+
+
+API: application programming interface:
+
+url:
+
+api request methods:
+
+GET, POST, PUT, DELETE , PUT
+GET : frontend data fetch:
+POST : frontend data send...
+DELETE: frotend data delete..
+PUT: frontend data update...
+
+api call -> fetch, axios
