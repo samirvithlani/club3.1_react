@@ -26,6 +26,7 @@ import { FormDemo3 } from './form/FormDemo3.jsx'
 import { FormDemo4 } from './form/FormDemo4.jsx'
 import { FormDemo5 } from './form/FormDemo5.jsx'
 import { Apidemo1 } from './components/API/Apidemo1.jsx'
+import { ApiDemo2 } from './components/API/ApiDemo2.jsx'
 //import './App.css'
 
 //component..
@@ -52,6 +53,7 @@ function App() {
           <Route path='/formdemo3' element = {<FormDemo3/>}></Route>
           <Route path='/formdemo4' element = {<FormDemo5/>}></Route>
           <Route path='/apidemo1' element = {<Apidemo1/>}></Route>
+          <Route path='/apidemo2' element = {<ApiDemo2/>}></Route>
           
           {/* <Route path='/*' element = {<h1>404</h1>}></Route> */}
           <Route path='/*' element = {<Error404/>}></Route>
