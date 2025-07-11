@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const Apidemo1 = () => {
     const [message, setmessage] = useState("")
@@ -18,10 +18,14 @@ export const Apidemo1 = () => {
 
 
     }
+
+    useEffect(()=>{
+        getApiCall()
+    },[])
   return (
     <div style={{textAlign:"center"}}>
         <h1>API DEMO 1</h1>
-        <button onClick={()=>{getApiCall()}}>GET</button>
+        {/* <button onClick={()=>{getApiCall()}}>GET</button> */}
         {message}
         {
             users.map((user)=>{

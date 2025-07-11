@@ -28,6 +28,9 @@ import { FormDemo5 } from './form/FormDemo5.jsx'
 import { Apidemo1 } from './components/API/Apidemo1.jsx'
 import { ApiDemo2 } from './components/API/ApiDemo2.jsx'
 import { ApiDemo3 } from './components/API/ApiDemo3.jsx'
+import { ApiDemo11 } from './components/API/ApiDemo11.jsx'
+import { MovieDetail } from './components/API/MovieDetail.jsx'
+import { UseEffectDemo } from './components/UseEffectDemo.jsx'
 //import './App.css'
 
 //component..
@@ -56,6 +59,8 @@ function App() {
           <Route path='/apidemo1' element = {<Apidemo1/>}></Route>
           <Route path='/apidemo2' element = {<ApiDemo2/>}></Route>
           <Route path='/apidemo3' element = {<ApiDemo3/>}></Route>
+          <Route path='/moviedetail/:id' element = {<MovieDetail/>}></Route>
+          <Route path='/useeffetdemo' element ={<UseEffectDemo/>}></Route>
           
           {/* <Route path='/*' element = {<h1>404</h1>}></Route> */}
           <Route path='/*' element = {<Error404/>}></Route>

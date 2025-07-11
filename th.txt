@@ -102,17 +102,26 @@ handleSubmit(cb)=>{
           }
 }
 
-
+n tire:
+URL : json formate:
 API: application programming interface:
 
 url:
 
 api request methods:
-
 GET, POST, PUT, DELETE , PUT
 GET : frontend data fetch:
 POST : frontend data send...
 DELETE: frotend data delete..
 PUT: frontend data update...
 
+npm i axios
+
 api call -> fetch, axios
+
+promise: asybc programming : api slow ---> data time... promise
+resolve reject :
+async await : 
+
+life cycle hook: useeffect
+to handle side effects in react js useeffect we can use..
