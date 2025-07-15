@@ -125,3 +125,7 @@ async await :
 
 life cycle hook: useeffect
 to handle side effects in react js useeffect we can use..
+
+
+toster...
+https://www.npmjs.com/package/react-toastify
