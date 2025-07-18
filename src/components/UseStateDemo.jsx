@@ -7,6 +7,7 @@ export const UseStateDemo = () => {
     //count --- stateVariable
     //setCount ->function -->use -->count chnage --> setCount -->
     //0 intial value
+    console.log("ok")
     const increseCount = ()=>{
         //count++
         setCount(count+1)
