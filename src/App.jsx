@@ -33,6 +33,8 @@ import { MovieDetail } from "./components/API/MovieDetail.jsx";
 import { UseEffectDemo } from "./components/UseEffectDemo.jsx";
 import { APiDemo5 } from "./components/API/APiDemo5.jsx";
 import { ToastContainer, Zoom } from "react-toastify";
+import { Apidemo111 } from "./components/API/ApiDemo111.jsx";
+import { ApiDemo112 } from "./components/API/ApiDemo112.jsx";
 //import './App.css'
 
 //component..
@@ -70,6 +72,7 @@ function App() {
         <Route path="/formdemo3" element={<FormDemo3 />}></Route>
         <Route path="/formdemo4" element={<FormDemo5 />}></Route>
         <Route path="/apidemo1" element={<Apidemo1 />}></Route>
+        <Route path="/apidemo111" element={<ApiDemo112 />}></Route>
         <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
         <Route path="/apidemo3" element={<ApiDemo3 />}></Route>
         <Route path="/apidemo5" element={<APiDemo5 />}></Route>

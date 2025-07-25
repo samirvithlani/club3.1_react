@@ -2,30 +2,11 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Loader } from '../Loader'
 import { toast } from 'react-toastify'
+import { useFetchData } from '../../hooks/ApiHook'
 
-export const Apidemo1 = () => {
+export const Apidemo111 = () => {
     
-    const [message, setmessage] = useState("")
-    const [users, setusers] = useState([])
-    const [isLoading, setisLoading] = useState(false)
-
-    const getApiCall=async()=>{
-
-        setisLoading(true)
-        //promise-->async await , then catch
-        const res = await axios.get("https://node5.onrender.com/user/user")
-        console.log("axios object",res)
-        console.log(res.data)
-        console.log(res.data.message) //string
-        setmessage(res.data.message)
-        console.log(res.data.data) //array
-        setusers(res.data.data)
-        setisLoading(false)
-    }
-
-    useEffect(()=>{
-        getApiCall()
-    },[])
+    const {data,isLoading} =useFetchData("https://node5.onrender.com/user/user")
 
     const deleteUser = async(id)=>{
         //delete api
@@ -49,7 +30,7 @@ export const Apidemo1 = () => {
         }
         <h1>API DEMO 1</h1>
         {/* <button onClick={()=>{getApiCall()}}>GET</button> */}
-        {message}
+        
         <table className='table'>
             <thead>
                 <tr>
@@ -63,7 +44,7 @@ export const Apidemo1 = () => {
             </thead>
             <tbody>
                 {
-                    users.map((user)=>{
+                    data.data?.map((user)=>{
                         return<tr>
                             <td>{user._id}</td>
                             <td>{user.name}</td>
