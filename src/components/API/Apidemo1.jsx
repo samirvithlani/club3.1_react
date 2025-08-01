@@ -9,7 +9,9 @@ export const Apidemo1 = () => {
     const [users, setusers] = useState([])
     const [isLoading, setisLoading] = useState(false)
 
-    const getApiCall=async()=>{
+
+
+    const getApiCall=async()=>{ 
 
         setisLoading(true)
         //promise-->async await , then catch
@@ -42,6 +44,11 @@ export const Apidemo1 = () => {
         }
     }
 
+    // const fun(value)=>{
+    //     //file api --> name = value
+    //     res.datadata
+    // }
+
   return (
     <div style={{textAlign:"center"}}>
         {
@@ -50,6 +57,7 @@ export const Apidemo1 = () => {
         <h1>API DEMO 1</h1>
         {/* <button onClick={()=>{getApiCall()}}>GET</button> */}
         {message}
+        {/* <in onch=={}> */}
         <table className='table'>
             <thead>
                 <tr>
