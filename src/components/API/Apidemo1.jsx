@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Loader } from '../Loader'
 import { toast } from 'react-toastify'
+import { Link } from 'react-router-dom'
 
 export const Apidemo1 = () => {
     
@@ -44,10 +45,11 @@ export const Apidemo1 = () => {
         }
     }
 
-    // const fun(value)=>{
-    //     //file api --> name = value
-    //     res.datadata
-    // }
+    const searchHandler = async(value)=>{
+        console.log(value)
+         const res = await  axios.get(`https://node5.onrender.com/user/filter?name=${value}`)
+         setusers(res.data.data)
+    }
 
   return (
     <div style={{textAlign:"center"}}>
@@ -58,6 +60,7 @@ export const Apidemo1 = () => {
         {/* <button onClick={()=>{getApiCall()}}>GET</button> */}
         {message}
         {/* <in onch=={}> */}
+        <input type='text' onChange={(event)=>{searchHandler(event.target.value)}}></input>
         <table className='table'>
             <thead>
                 <tr>
@@ -78,7 +81,10 @@ export const Apidemo1 = () => {
                             <td>{user.age}</td>
                             <td>{user.isActive == true ? "Active":"Not Active"}</td>
                             <td>{user.password ? user.password :"N/A"}</td>
+                            <td>
                             <button onClick={()=>{deleteUser(user._id)}} className='btn btn-danger'>DELETE</button>
+                            <Link to={`/updateuser/${user._id}`} className='btn btn-warning' style={{marginLeft:"2px"}}>update</Link>
+                            </td>
                         </tr>
                     })
                 }
