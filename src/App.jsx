@@ -36,6 +36,8 @@ import { ToastContainer, Zoom } from "react-toastify";
 import { Apidemo111 } from "./components/API/ApiDemo111.jsx";
 import { ApiDemo112 } from "./components/API/ApiDemo112.jsx";
 import { UpdateUser } from "./components/API/UpdateUser.jsx";
+import { UseRefDemo1 } from "./components/UseRefDemo1.jsx";
+import { UseRefDemo2 } from "./components/UseRefDemo2.jsx";
 //import './App.css'
 
 //component..
@@ -80,6 +82,8 @@ function App() {
         <Route path="/moviedetail/:id" element={<MovieDetail />}></Route>
         <Route path="/useeffetdemo" element={<UseEffectDemo />}></Route>
         <Route path="/updateuser/:id" element = {<UpdateUser/>}></Route>
+        <Route path="/userefdemo1" element = {<UseRefDemo1/>}></Route>
+        <Route path="/userefdemo2" element = {<UseRefDemo2/>}></Route>
 
         {/* <Route path='/*' element = {<h1>404</h1>}></Route> */}
         <Route path="/*" element={<Error404 />}></Route>
