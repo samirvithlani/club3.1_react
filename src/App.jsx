@@ -38,12 +38,22 @@ import { ApiDemo112 } from "./components/API/ApiDemo112.jsx";
 import { UpdateUser } from "./components/API/UpdateUser.jsx";
 import { UseRefDemo1 } from "./components/UseRefDemo1.jsx";
 import { UseRefDemo2 } from "./components/UseRefDemo2.jsx";
+import { UseRefDemo3 } from "./components/UseRefDemo3.jsx";
+import { Employee } from "./components/employee/Employee.jsx";
+import { ThemeContext } from "./components/ThemeContext.jsx";
 //import './App.css'
 
 //component..
 function App() {
+  const [theme, settheme] = useState("light");
+
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: theme == "light" ? "white" : "black",
+        color: theme == "light" ? "black" : "white",
+      }}
+    >
       <ToastContainer
         position="top-center"
         autoClose={5000}
@@ -57,37 +67,41 @@ function App() {
         theme="dark"
         transition={Zoom}
       />
-      <Navbar></Navbar>
 
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/movies" element={<Movies />}></Route>
-        <Route path="/shows" element={<Shows />}></Route>
-        <Route path="/playing/:id" element={<PLayContent />}></Route>
-        <Route path="/useStateDemo" element={<UseStateDemo />}></Route>
-        <Route path="/useStateDemo2" element={<UseStateDemo2 />}></Route>
-        <Route path="/useStateDemo3" element={<UseStateDemo3 />}></Route>
-        <Route path="/inputdemo1" element={<InputDemo1 />}></Route>
-        <Route path="/usememo1" element={<UseMemoDemo1 />}></Route>
-        <Route path="/findbomb" element={<FindBomb />}></Route>
-        <Route path="/formDemo1" element={<FormDemo1 />}></Route>
-        <Route path="/formdemo2" element={<FormDemo2 />}></Route>
-        <Route path="/formdemo3" element={<FormDemo3 />}></Route>
-        <Route path="/formdemo4" element={<FormDemo5 />}></Route>
-        <Route path="/apidemo1" element={<Apidemo1 />}></Route>
-        <Route path="/apidemo111" element={<ApiDemo112 />}></Route>
-        <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
-        <Route path="/apidemo3" element={<ApiDemo3 />}></Route>
-        <Route path="/apidemo5" element={<APiDemo5 />}></Route>
-        <Route path="/moviedetail/:id" element={<MovieDetail />}></Route>
-        <Route path="/useeffetdemo" element={<UseEffectDemo />}></Route>
-        <Route path="/updateuser/:id" element = {<UpdateUser/>}></Route>
-        <Route path="/userefdemo1" element = {<UseRefDemo1/>}></Route>
-        <Route path="/userefdemo2" element = {<UseRefDemo2/>}></Route>
+      <ThemeContext.Provider value={{ theme, settheme }}>
+        <Navbar></Navbar>
+      </ThemeContext.Provider>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/movies" element={<Movies />}></Route>
+          <Route path="/shows" element={<Shows />}></Route>
+          <Route path="/playing/:id" element={<PLayContent />}></Route>
+          <Route path="/useStateDemo" element={<UseStateDemo />}></Route>
+          <Route path="/useStateDemo2" element={<UseStateDemo2 />}></Route>
+          <Route path="/useStateDemo3" element={<UseStateDemo3 />}></Route>
+          <Route path="/inputdemo1" element={<InputDemo1 />}></Route>
+          <Route path="/usememo1" element={<UseMemoDemo1 />}></Route>
+          <Route path="/findbomb" element={<FindBomb />}></Route>
+          <Route path="/formDemo1" element={<FormDemo1 />}></Route>
+          <Route path="/formdemo2" element={<FormDemo2 />}></Route>
+          <Route path="/formdemo3" element={<FormDemo3 />}></Route>
+          <Route path="/formdemo4" element={<FormDemo5 />}></Route>
+          <Route path="/apidemo1" element={<Apidemo1 />}></Route>
+          <Route path="/apidemo111" element={<ApiDemo112 />}></Route>
+          <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
+          <Route path="/apidemo3" element={<ApiDemo3 />}></Route>
+          <Route path="/apidemo5" element={<APiDemo5 />}></Route>
+          <Route path="/moviedetail/:id" element={<MovieDetail />}></Route>
+          <Route path="/useeffetdemo" element={<UseEffectDemo />}></Route>
+          <Route path="/updateuser/:id" element={<UpdateUser />}></Route>
+          <Route path="/userefdemo1" element={<UseRefDemo1 />}></Route>
+          <Route path="/userefdemo2" element={<UseRefDemo3 />}></Route>
+          <Route path="/employees" element={<Employee />}></Route>
 
-        {/* <Route path='/*' element = {<h1>404</h1>}></Route> */}
-        <Route path="/*" element={<Error404 />}></Route>
-      </Routes>
+          {/* <Route path='/*' element = {<h1>404</h1>}></Route> */}
+          <Route path="/*" element={<Error404 />}></Route>
+        </Routes>
+      
     </div>
   );
 }
