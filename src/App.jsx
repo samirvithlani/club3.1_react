@@ -41,6 +41,7 @@ import { UseRefDemo2 } from "./components/UseRefDemo2.jsx";
 import { UseRefDemo3 } from "./components/UseRefDemo3.jsx";
 import { Employee } from "./components/employee/Employee.jsx";
 import { ThemeContext } from "./components/ThemeContext.jsx";
+import { MuiDemo1 } from "./components/mui/MuiDemo1.jsx";
 //import './App.css'
 
 //component..
@@ -97,6 +98,7 @@ function App() {
           <Route path="/userefdemo1" element={<UseRefDemo1 />}></Route>
           <Route path="/userefdemo2" element={<UseRefDemo3 />}></Route>
           <Route path="/employees" element={<Employee />}></Route>
+          <Route path="/muidemo1" element = {<MuiDemo1/>}></Route>
 
           {/* <Route path='/*' element = {<h1>404</h1>}></Route> */}
           <Route path="/*" element={<Error404 />}></Route>

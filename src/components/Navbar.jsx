@@ -82,8 +82,13 @@ export const Navbar = () => {
       <li class="nav-item">
         <Link class="nav-link" to="/userefdemo2">useref DEMO 2 </Link>
       </li>
-      <li class="nav-item">
+      <li
+       class="nav-item">
         <Link class="nav-link" to="/employees">employees</Link>
+      </li>
+      <li
+       class="nav-item">
+        <Link class="nav-link" to="/muidemo1">mui demo 1</Link>
       </li>
       
     </ul>
